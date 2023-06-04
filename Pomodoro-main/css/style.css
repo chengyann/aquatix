@@ -1,0 +1,177 @@
+/* *{
+    margin:0;
+    padding:0;
+} */
+
+div#pomo {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    padding-top: 5px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    width: 300px;
+    min-width: 40%;
+}
+
+#logo {
+    padding: 20px;
+    text-shadow: 2px 3px 4px rgb(150, 162, 168);
+    color: rgb(235, 235, 235);
+}
+
+
+body {
+    font-family: 'ArialRounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-weight: 300;
+
+    background-color: rgb(69, 124, 163);
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    transition: background-color 0.5s ease-in-out 0s;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top);
+}
+
+.btn {
+
+    border: medium none;
+    color: white;
+    margin: 0px;
+    border-radius: 4px;
+    font-family: ArialRounded;
+    font-size: 16px;
+    padding: 2px 12px;
+    height: 28px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    box-shadow: none;
+    font-weight: 300;
+}
+
+.active {
+    border: medium none;
+    margin: 0px;
+    border-radius: 4px;
+    font-family: ArialRounded;
+    font-size: 16px;
+    padding: 2px 12px;
+    height: 28px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.15) none repeat scroll 0% 0%;
+    box-shadow: none;
+    color: white;
+    opacity: 1;
+    font-weight: bold;
+}
+
+#timer {
+    margin-top: 35px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-size: 75px;
+    text-shadow: 1px 2px 3px gray;
+}
+
+#nowt {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-size: 25px;
+    text-shadow: 1px 2px 3px gray;
+}
+
+#start {
+    cursor: pointer;
+    border: medium none;
+    margin: 20px 0px 0px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+    font-family: ArialRounded;
+    font-size: 22px;
+    height: 55px;
+    color: rgb(69, 124, 163);
+    font-weight: bold;
+    width: 200px;
+    background-color: white;
+    transition: color 0.5s ease-in-out 0s;
+}
+
+.chart-wrap {
+    margin-left: 50px;
+    font-family: sans-serif;
+    height: 650px !important;
+    width: 300px !important;
+}
+
+.chart-wrap .title {
+    font-weight: bold;
+    font-size: 1.62em;
+    padding: 0.5em 0 1.8em 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.chart-wrap.vertical .grid {
+    transform: translateY(-175px) translateX(175px) rotate(-90deg);
+}
+
+.chart-wrap.vertical .grid .bar::after {
+    transform: translateY(-50%) rotate(45deg);
+    display: block;
+}
+
+.chart-wrap.vertical .grid::before,
+.chart-wrap.vertical .grid::after {
+    transform: translateX(-0.2em) rotate(90deg);
+}
+
+.chart-wrap .grid {
+    position: relative;
+    padding: 5px 0 5px 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #aaa;
+    background: repeating-linear-gradient(90deg, transparent, transparent 19.5%, rgba(170, 170, 170, 0.7) 20%);
+}
+
+.chart-wrap .grid::before {
+    font-size: 0.8em;
+    font-weight: bold;
+    content: '0%';
+    position: absolute;
+    left: -0.5em;
+    top: -1.5em;
+}
+
+.chart-wrap .grid::after {
+    font-size: 0.8em;
+    font-weight: bold;
+    content: '100%';
+    position: absolute;
+    right: -1.5em;
+    top: -1.5em;
+}
+
+.chart-wrap .bar {
+    width: var(--bar-value);
+    height: 50px;
+    margin: 30px 0;
+    background-color: #F16335;
+    border-radius: 0 3px 3px 0;
+}
+
+.chart-wrap .bar:hover {
+    opacity: 0.7;
+}
+
+.chart-wrap .bar::after {
+    content: attr(data-name);
+    margin-left: 100%;
+    padding: 10px;
+    display: inline-block;
+    white-space: nowrap;
+}

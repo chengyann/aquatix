@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pomodoro</title>
+    <meta name="author" content="Soufiane Mjadar">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="pomo.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body>
+    <p></p>
+    <button onclick="startWebcam();">Start WebCam</button>
+    <button onclick="getCurrentFrame();">Take Snapshot</button>
+    </p>
+    <!-- <video id="video" hidden autoplay></video> -->
+    <!-- <canvas id="myCanvas" hidden></canvas> -->
+    <img id="my-data-uri" src="">
+    <script src="webcam.js"></script>
+    <h1 id="logo">
+        AquaTix
+    </h1>
+
+    <!-- <div class="chart-wrap vertical">
+        <div class="grid">
+            <div class="bar" style="--bar-value:85%;" data-name="Your Blog" title="Your Blog 85%"></div>
+            <div class="bar" style="--bar-value:23%;" data-name="Medium" title="Medium 23%"></div>
+            <div class="bar" style="--bar-value:7%;" data-name="Tumblr" title="Tumblr 7%"></div>
+            <div class="bar" style="--bar-value:38%;" data-name="Facebook" title="Facebook 38%"></div>
+            <div class="bar" style="--bar-value:35%;" data-name="YouTube" title="YouTube 35%"></div>
+            <div class="bar" style="--bar-value:30%;" data-name="LinkedIn" title="LinkedIn 30%"></div>
+            <div class="bar" style="--bar-value:5%;" data-name="Twitter" title="Twitter 5%"></div>
+            <div class="bar" style="--bar-value:20%;" data-name="Other" title="Other 20%"></div>
+        </div>
+    </div> -->
+
+    <body>
+
+        <hr>
+        <center>
+            <span id="nowt"></span><br>
+            <div id="pomo">
+
+                <div>
+                    <button id="btn1" class="active">Pomodoro</button>
+                    <button id="btn2" class="btn">Short Break</button>
+                    <button id="btn3" class="btn">Long Break</button>
+                </div>
+
+                <div id="timer"><span id="m">25</span>:<span id="s">00</span></div>
+
+                <div>
+                    <button id="start">START</button>
+                </div>
+
+                <div>
+                    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+                    <video id="webcam" autoplay playsinline width="640" height="480"></video>
+                    <canvas id="canvas" class="d-none"></canvas>
+                    <!-- <audio id="snapSound" src="audio/snap.wav" preload = "auto"></audio> -->
+                </div>
+            </div>
+        </center>
+    </body>
+</body>
+
+</html>
